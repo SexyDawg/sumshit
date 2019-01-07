@@ -1,0 +1,56 @@
+1.	package nananana;  
+2.	  
+3.	import java.util.Scanner;  
+4.	  
+5.	public class killme {  
+6.	  
+7.	    public static void main(String[] args) {  
+8.	         Scanner scanner = new Scanner(System.in);  
+9.	          int[] numbers = new int[6];  
+10.	          System.out.println("Enter the elements:");  
+11.	          for (int i=0; i<6; i++)  
+12.	          {  
+13.	              numbers[i] = scanner.nextInt();  
+14.	          }  
+15.	        int maximum = maxNumber(numbers);  
+16.	        System.out.println("Max = " + maximum);  
+17.	        int minimum = minNumber(numbers);  
+18.	        System.out.println("Min = " + minimum);  
+19.	        double average = averageArray(numbers);  
+20.	        System.out.println("Average = " + average);  
+21.	        int sum = sumArray(numbers);  
+22.	        System.out.println("Sum = " + sum);  
+23.	    }  
+24.	  
+25.	    public static int maxNumber(int[] arr) {  
+26.	        int max = arr[0];  
+27.	        for (int i = 1; i < arr.length; i++) {  
+28.	            if (arr[i] > max) {  
+29.	                max = arr[i];  
+30.	            }  
+31.	        }  
+32.	        return max;  
+33.	    }  
+34.	  
+35.	    public static int minNumber(int[] arr) {  
+36.	        int min = arr[0];  
+37.	        for (int i = 1; i < arr.length; i++) {  
+38.	            if (arr[i] < min) {  
+39.	                min = arr[i];  
+40.	            }  
+41.	        }  
+42.	        return min;  
+43.	    }  
+44.	  
+45.	    public static int sumArray(int[] arr) {  
+46.	        int sum = 0;  
+47.	        for (int i = 0; i < arr.length; i++) {  
+48.	            sum += arr[i];  
+49.	        }  
+50.	        return sum;  
+51.	    }  
+52.	  
+53.	    public static double averageArray(int[] arr) {  
+54.	        return (double) sumArray(arr) / arr.length;  
+55.	    }  
+56.	} 
